@@ -7,11 +7,19 @@ var onMoveEnd = function(oldPos, newPos) {
   if (game.game_over() === true) {
     // alert('Game Over');
     // Restart game 
-    game = new Chess();
-    board.position('start');
+    
+   
     window.setTimeout(function() {
-      playGame(algo=4, skillW=3, skillB=3)
-    }, 2000) 
+      game = new Chess();
+      window.setTimeout(function() {
+        board.clear();
+
+        playGame(algo=4, skillW=3, skillB=3)
+        
+      }, 2000) 
+    }, 1000) 
+    
+
     console.log('Game Over');
   }
 

@@ -1021,7 +1021,7 @@ var Chess = function (r) {
                 return _();
             },
             in_draw: function () {
-                return vr >= 100 || _() || y() || m();
+                return vr >= 60 || _() || y() || m();
             },
             insufficient_material: function () {
                 return y();
@@ -1030,7 +1030,7 @@ var Chess = function (r) {
                 return m();
             },
             game_over: function () {
-                return vr >= 100 || b() || _() || y() || m();
+                return vr >= 60 || b() || _() || y() || m();
             },
             validate_fen: function (r) {
                 return o(r);

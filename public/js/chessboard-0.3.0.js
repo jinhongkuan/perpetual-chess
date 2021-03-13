@@ -634,7 +634,7 @@
                 !0 !== b.sparePieces && (b.sparePieces = !1);
                 !0 === b.sparePieces && (b.draggable = !0);
                 if (!0 !== b.hasOwnProperty("pieceTheme") || ("string" !== typeof b.pieceTheme && "function" !== typeof b.pieceTheme)) b.pieceTheme = "img/chesspieces/wikipedia/{piece}.svg";
-                if (!0 !== b.hasOwnProperty("appearSpeed") || !0 !== w(b.appearSpeed)) b.appearSpeed = 300;
+                if (!0 !== b.hasOwnProperty("appearSpeed") || !0 !== w(b.appearSpeed)) b.appearSpeed = 50;
                 if (!0 !== b.hasOwnProperty("moveSpeed") || !0 !== w(b.moveSpeed)) b.moveSpeed = 300;
                 if (!0 !== b.hasOwnProperty("blinkSpeed") || !0 !== w(b.moveSpeed)) b.blinkSpeed = 300;
                 if (!0 !== b.hasOwnProperty("snapbackSpeed") || !0 !== w(b.snapbackSpeed)) b.snapbackSpeed = 50;

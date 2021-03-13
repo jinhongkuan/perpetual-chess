@@ -6,10 +6,13 @@
     <link rel="stylesheet" href="./css/chessboard-0.3.0.min.css">
   </head>
   <body style="overflow: hidden">
-    <div id="board" style="height: 100%"></div>
+    <div id="outer" style="display: table; position:absolute; top: 0; left: 0; height: 100%; width: 100%; background-image: url('img/background.jpg');">
+      <div id="board" style="width: 100vh; margin: auto; "></div>
+    </div>
+    
   </body>
   <script src="./js/jquery-3.2.1.min.js"></script>
-  <script src="./js/chess.min.js"></script>
+  <script src="./js/chess.js"></script>
   <script src="./js/chessboard-0.3.0.js"></script>
   <script src="./js/movecalc.js"></script>
   <script src="./js/main.js"></script>
