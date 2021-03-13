@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jinhongkuan/perpetual-chess/issues"
   },
-  "homepage": "https://github.com/jinhongkuan/perpetual-chess#readme"
+  "homepage": "https://github.com/jinhongkuan/perpetual-chess#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
