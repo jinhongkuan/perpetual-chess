@@ -101,8 +101,8 @@ var calcBestMoveNoAB = function(depth, game, playerColor,
     // Recursively get the value of this move
     value = calcBestMoveNoAB(depth-1, game, playerColor, !isMaximizingPlayer)[0];
     // Log the value of this move
-    console.log(isMaximizingPlayer ? 'Max: ' : 'Min: ', depth, move, value,
-                bestMove, bestMoveValue);
+    // console.log(isMaximizingPlayer ? 'Max: ' : 'Min: ', depth, move, value,
+    //             bestMove, bestMoveValue);
 
     if (isMaximizingPlayer) {
       // Look for moves that maximize position
@@ -121,7 +121,7 @@ var calcBestMoveNoAB = function(depth, game, playerColor,
     game.undo();
   }
   // Log the best move at the current depth
-  console.log('Depth: ' + depth + ' | Best Move: ' + bestMove + ' | ' + bestMoveValue);
+  // console.log('Depth: ' + depth + ' | Best Move: ' + bestMove + ' | ' + bestMoveValue);
   // Return the best move, or the only move
   return [bestMoveValue, bestMove || possibleMoves[0]];
 }
@@ -162,8 +162,8 @@ var calcBestMove = function(depth, game, playerColor,
     // Recursively get the value from this move
     value = calcBestMove(depth-1, game, playerColor, alpha, beta, !isMaximizingPlayer)[0];
     // Log the value of this move
-    console.log(isMaximizingPlayer ? 'Max: ' : 'Min: ', depth, move, value,
-                bestMove, bestMoveValue);
+    // console.log(isMaximizingPlayer ? 'Max: ' : 'Min: ', depth, move, value,
+    //             bestMove, bestMoveValue);
 
     if (isMaximizingPlayer) {
       // Look for moves that maximize position
@@ -189,7 +189,7 @@ var calcBestMove = function(depth, game, playerColor,
     }
   }
   // Log the best move at the current depth
-  console.log('Depth: ' + depth + ' | Best Move: ' + bestMove + ' | ' + bestMoveValue + ' | A: ' + alpha + ' | B: ' + beta);
+  // console.log('Depth: ' + depth + ' | Best Move: ' + bestMove + ' | ' + bestMoveValue + ' | A: ' + alpha + ' | B: ' + beta);
   // Return the best move, or the only move
   return [bestMoveValue, bestMove || possibleMoves[0]];
 }

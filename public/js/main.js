@@ -21,17 +21,26 @@ var makeMove = function(algo, skill=3) {
   board.position(game.fen());
 }
 
+var randn_bm = function() {
+  var u = 0, v = 0;
+  while(u === 0) u = Math.random(); //Converting [0,1) to (0,1)
+  while(v === 0) v = Math.random();
+  return Math.sqrt( -2.0 * Math.log( u ) ) * Math.cos( 2.0 * Math.PI * v );
+}
+
 // Computer vs Computer
-var playGame = function(algo=4, skillW=2, skillB=2) {
+var playGame = function(algo=4, skillW=2, skillB=2, turn=0) {
   if (game.game_over() === true) {
     console.log('game over');
     return;
   }
   var skill = game.turn() === 'w' ? skillW : skillB;
   makeMove(algo, skill);
+  turn_a = 500 + turn - 50
+  turn_b = 250 + turn - 25
   window.setTimeout(function() {
-    playGame(algo, skillW, skillB);
-  }, 250);
+    playGame(algo, skillW, skillB, turn + 1);
+  }, Math.max(400, Math.floor(turn_a + randn_bm() * turn_b))) ;
 };
 
 // Handles what to do after human makes move.

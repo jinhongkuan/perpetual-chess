@@ -5,13 +5,22 @@
     <title></title>
     <link rel="stylesheet" href="./css/chessboard-0.3.0.min.css">
   </head>
-  <body>
-    <div id="board" style="width: 400px"></div>
+  <body style="overflow: hidden">
+    <div id="board" style="height: 100%"></div>
   </body>
   <script src="./js/jquery-3.2.1.min.js"></script>
   <script src="./js/chess.min.js"></script>
-  <script src="./js/chessboard-0.3.0.min.js"></script>
+  <script src="./js/chessboard-0.3.0.js"></script>
   <script src="./js/movecalc.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/boardconfig.js"></script>
+  <script>
+    $(document).ready(function(){
+      board.position('start');
+      window.setTimeout(function() {
+        playGame(algo=4, skillW=3, skillB=3)
+  }, 2000) ;
+      
+  });
+  </script>
 </html>

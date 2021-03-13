@@ -5,7 +5,13 @@ var board,
 var onMoveEnd = function(oldPos, newPos) {
   // Alert if game is over
   if (game.game_over() === true) {
-    alert('Game Over');
+    // alert('Game Over');
+    // Restart game 
+    game = new Chess();
+    board.position('start');
+    window.setTimeout(function() {
+      playGame(algo=4, skillW=3, skillB=3)
+    }, 2000) 
     console.log('Game Over');
   }
 
